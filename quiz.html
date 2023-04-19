@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Solventflea</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <img src="/svflux.jpg" alt="img" id="img" class="img">
+    <h1 id="title">Conteste las preguntas</h1>
+
+
+    <div id="quiz-container">
+        <div class="questions">
+            <h2 id="question"></h2>
+            <ol type="A">
+                <li class="opcion"><span id="opcion0" onclick="calcScore(this)"></span></li>
+                <li class="opcion"><span id="opcion1" onclick="calcScore(this)"></span></li>
+                <li class="opcion"><span id="opcion2" onclick="calcScore(this)"></span></li>
+                <li class="opcion"><span id="opcion3" onclick="calcScore(this)"></span></li>
+            </ol>
+            <h4 id="stat"></h4>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="next">Siguiente</button>
+        </div>
+
+    </div>
+    <div id="scoreboard">
+        <img src="/svflux.jpg" alt="">
+        <h2 id="score-title">Puntuación</h2>
+        <h2 id="score"></h2>
+        <button type="button" id="score-btn" onclick="backToQuiz()">Volver al Quiz</button>
+        <button type="button" id="check-answer" onclick="checkAnswer()">Ver respuestas</button>
+    </div>
+
+    <div id="answerBank">
+        <h2>Respuestas :</h2>
+        <ol type="1" id="answers">
+
+        </ol>
+        <button type="button" id="score-btn" onclick="backToQuiz()">Volver al quiz</button>
+    </div>
+    <script src="/quiz.js"></script>
+</body>
+
+</html>
